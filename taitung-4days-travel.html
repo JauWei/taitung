@@ -400,6 +400,36 @@
       display: block;
     }
 
+    .plan-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 0 0 18px;
+      box-shadow: 0 8px 24px rgba(40, 48, 43, .07);
+    }
+
+    .plan-switch label {
+      font-weight: 800;
+      color: var(--forest);
+    }
+
+    .plan-switch select {
+      min-height: 42px;
+      min-width: min(100%, 330px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      padding: 8px 12px;
+      font: inherit;
+    }
+
     footer {
       background: var(--ink);
       color: rgba(255, 255, 255, .82);
@@ -608,7 +638,7 @@
     <section id="stay">
       <div class="section-head">
         <h2>住宿點怎麼選</h2>
-        <p class="lead">從高雄 H2O HOTEL 水京棧國際酒店出發時，第一天已經站在南台灣，進台東比從中部出發輕鬆許多。最佳解仍是先進縱谷住鹿野/關山兩晚，再移到都蘭/東河兩晚，第五天白天從東海岸回台中。</p>
+        <p class="lead">從高雄 H2O HOTEL 水京棧國際酒店出發時，第一天已經站在南台灣，進台東比從中部出發輕鬆許多。最佳解仍是先進縱谷住鹿野/關山兩晚，再移到都蘭/東河兩晚；若重視夜市、市區餐廳、飯店選擇與回程補給，2晚鹿野 + 2晚台東市也很可行。</p>
       </div>
       <div class="drive-strip">
         <div class="drive-step">
@@ -650,6 +680,16 @@
           </tr>
           <tr>
             <td>B</td>
+            <td>2晚鹿野/關山 + 2晚台東市</td>
+            <td>可行而且務實。保留滑翔傘與伯朗大道效率，後兩晚吃飯、夜市、回程補給最方便。</td>
+            <td>前兩晚約5-25分鐘</td>
+            <td>約35-55分鐘</td>
+            <td>約25-40分鐘</td>
+            <td>約45-60分鐘</td>
+            <td>市區便利派首選；缺點是海岸活動結束後要開回市區，海邊度假感較少。</td>
+          </tr>
+          <tr>
+            <td>C</td>
             <td>4晚台東市</td>
             <td>可行但效率低。每天南北折返，最不像慢旅。</td>
             <td>約45-60分鐘</td>
@@ -659,7 +699,7 @@
             <td>餐飲方便，但每天都在開車。</td>
           </tr>
           <tr>
-            <td>C</td>
+            <td>D</td>
             <td>2晚池上 + 2晚都蘭</td>
             <td>可行。適合把伯朗大道放第一優先，但滑翔傘當天較早起。</td>
             <td>約45-55分鐘</td>
@@ -669,7 +709,7 @@
             <td>稻田控可選，但滑翔傘當天要早起。</td>
           </tr>
           <tr>
-            <td>D</td>
+            <td>E</td>
             <td>4晚都蘭</td>
             <td>不建議。即使從高雄出發，四晚都蘭仍會讓縱谷活動變成長途往返。</td>
             <td>約50-70分鐘</td>
@@ -773,8 +813,15 @@
               <rect x="686" y="394" width="34" height="30" fill="#9b9b9b"></rect>
               <text x="695" y="416" font-size="18" fill="#fff" font-weight="800">06</text>
               <circle cx="704" cy="430" r="8" fill="#f06b3c"></circle>
-              <text x="594" y="458" font-size="21" fill="#17211d" font-weight="800">台東觀光夜市</text>
-              <text x="594" y="484" font-size="14" fill="#5f6b64">Day 3 晚餐，週四至週六最佳</text>
+              <text x="594" y="458" font-size="21" fill="#17211d" font-weight="800">卑南遺址 / 夜市</text>
+              <text x="594" y="484" font-size="14" fill="#5f6b64">Day 4 文化，Day 3 夜市</text>
+            </g>
+            <g>
+              <rect x="468" y="244" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="477" y="266" font-size="18" fill="#fff" font-weight="800">04</text>
+              <circle cx="512" cy="274" r="8" fill="#f0b24a"></circle>
+              <text x="392" y="286" font-size="18" fill="#17211d" font-weight="800">布農部落</text>
+              <text x="392" y="310" font-size="13" fill="#5f6b64">Day 3 上午</text>
             </g>
             <g>
               <rect x="408" y="468" width="34" height="30" fill="#9b9b9b"></rect>
@@ -805,7 +852,20 @@
             </g>
           </g>
         </svg>
-        <p class="map-note">簡圖先以南台灣輪廓作底，再用編號點與箭頭呈現每日順序。粉紅線為 Day 1-3 主要去程，藍線為台東東海岸移動與夜市支線，橘色虛線為 Day 5 回程；萬巒豬腳是主線午餐，東港海鮮是同日替代選項。</p>
+        <p class="map-note">簡圖先以南台灣輪廓作底，再用編號點與箭頭呈現每日順序。粉紅線為 Day 1-3 主要去程，藍線為台東東海岸移動、卑南與夜市支線，橘色虛線為 Day 5 回程；萬巒豬腳是主線午餐，東港海鮮是同日替代選項。</p>
+      </div>
+      <div class="plan-switch">
+        <label for="lodgingPlan">選擇住宿方案，行程表會跟著調整</label>
+        <select id="lodgingPlan" aria-label="住宿方案">
+          <option value="coast">A 海岸慢旅：2晚鹿野/關山 + 2晚都蘭/東河</option>
+          <option value="city">B 市區便利：2晚鹿野/關山 + 2晚台東市</option>
+        </select>
+      </div>
+      <div class="card" style="margin-bottom:26px;">
+        <div class="card-body">
+          <h3 data-plan-field="summaryTitle">目前方案：海岸慢旅</h3>
+          <p data-plan-field="summary">Day 3 做完布農部落與都蘭文化後住都蘭/東河；Day 4 早上玩水、下午安排卑南遺址/史前文化，再回都蘭或東河。優點是海上活動與部落體驗近，缺點是晚餐與夜市要多開一段。</p>
+        </div>
       </div>
       <div class="timeline">
         <article class="day">
@@ -860,15 +920,15 @@
         </article>
 
         <article class="day">
-          <div class="day-no">Day 3<br>縱谷→都蘭</div>
+          <div class="day-no" data-plan-field="day3Badge">Day 3<br>縱谷→都蘭</div>
           <div class="card">
             <div class="card-body">
               <div>
-                <h3>從縱谷切到東海岸，做一場部落慢旅</h3>
-                <p>上午退房後開往都蘭或東河，途中可停鹿野茶區、初鹿牧場或台東市補給。下午安排都蘭部落導覽、阿美族文化體驗、椰葉或自然素材編織；若剛好是週四到週六，晚餐建議回台東市走台東觀光夜市，再回都蘭入住。</p>
+                <h3>Day 3：布農族文化，再接都蘭部落</h3>
+                <p data-plan-field="day3Text">上午從鹿野/關山退房後先到延平鄉布農部落休閒農場，安排部落劇場、布農族歌謠、園區散步或手作體驗。下午移動到都蘭，安排阿美族部落導覽與椰葉編織；若剛好是週四到週六，晚餐可進台東市走台東觀光夜市，再回都蘭/東河入住。</p>
                 <div class="pill-row">
-                  <span class="pill">住宿：都蘭/東河</span>
-                  <span class="pill">縱谷到都蘭：約1.5-2小時</span>
+                  <span class="pill" data-plan-field="day3Stay">住宿：都蘭/東河</span>
+                  <span class="pill">上午：布農部落休閒農場</span>
                   <span class="pill">文化：都蘭部落</span>
                   <span class="pill">手作：椰葉編織</span>
                   <span class="pill">晚餐：台東觀光夜市</span>
@@ -877,52 +937,53 @@
               <div>
                 <h3>建議預約</h3>
                 <ul class="fact-list">
+                  <li>布農部落休閒農場：建議抓1.5-2.5小時，部落劇場與DIY體驗需先確認當日場次與人數條件。</li>
                   <li>'Etolan Style：都蘭部落導覽、文化手作。</li>
                   <li>米麻岸：自然素材、阿美族文化手作。</li>
                   <li>達麓岸部落屋：風味餐與生活文化體驗。</li>
                   <li>台東觀光夜市多以週四至週六晚間營業資訊最常見，出發前請再確認當週公告。</li>
                 </ul>
-                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20%E9%83%A8%E8%90%BD%E9%AB%94%E9%A9%97%20%E5%8F%B0%E6%9D%B1%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82" target="_blank" rel="noreferrer">開啟地圖查詢</a>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E8%BE%B2%E9%83%A8%E8%90%BD%E4%BC%91%E9%96%92%E8%BE%B2%E5%A0%B4%20%E9%83%BD%E8%98%AD%20%E5%8F%B0%E6%9D%B1%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82" target="_blank" rel="noreferrer">開啟地圖查詢</a>
               </div>
             </div>
           </div>
         </article>
 
         <article class="day">
-          <div class="day-no">Day 4<br>住都蘭</div>
+          <div class="day-no" data-plan-field="day4Badge">Day 4<br>住都蘭</div>
           <div class="card">
             <div class="card-body">
               <div>
-                <h3>SUP 或衝浪，午後留給海岸線</h3>
-                <p>早上安排SUP或衝浪課。初學、想拍照與穩定體驗者選SUP；想玩浪與運動感的人選金樽、東河一帶衝浪。下午可排水往上流、加路蘭、小野柳，或回台東市吃晚餐。</p>
+                <h3>Day 4：SUP 或衝浪，下午補卑南文化</h3>
+                <p data-plan-field="day4Text">早上安排SUP或衝浪課。初學、想拍照與穩定體驗者選SUP；想玩浪與運動感的人選金樽、東河一帶衝浪。下午移動到卑南遺址公園或國立臺灣史前文化博物館，補上台東平原、卑南文化與史前聚落脈絡，晚上回都蘭/東河。</p>
                 <div class="pill-row">
                   <span class="pill">上午：SUP/衝浪</span>
-                  <span class="pill">下午：加路蘭/小野柳</span>
-                  <span class="pill">晚餐：都蘭或台東市</span>
+                  <span class="pill">下午：卑南遺址公園/史前館</span>
+                  <span class="pill" data-plan-field="day4Stay">住宿：都蘭/東河</span>
                 </div>
               </div>
               <div>
                 <h3>天候備案</h3>
                 <ul class="fact-list">
-                  <li>海況不佳時改都蘭糖廠、月光小棧、咖啡店。</li>
-                  <li>晚上想吃多一點，開回台東市最方便。</li>
+                  <li>卑南遺址公園是現地保存展示場所；史前館本館則適合看考古與卑南文化脈絡。</li>
+                  <li>海況不佳時可把卑南文化提前到上午，下午改都蘭糖廠、加路蘭或市區咖啡店。</li>
                   <li>隔天要長途回台中，今晚建議整理行李、早點休息。</li>
                 </ul>
-                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20SUP%20%E9%87%91%E6%A8%BD%20%E8%A1%9D%E6%B5%AA" target="_blank" rel="noreferrer">開啟地圖查詢</a>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%A8%BD%20%E8%A1%9D%E6%B5%AA%20%E5%8D%91%E5%8D%97%E9%81%BA%E5%9D%80%E5%85%AC%E5%9C%92%20%E5%8F%B2%E5%89%8D%E9%A4%A8" target="_blank" rel="noreferrer">開啟地圖查詢</a>
               </div>
             </div>
           </div>
         </article>
 
         <article class="day">
-          <div class="day-no">Day 5<br>都蘭→台中</div>
+          <div class="day-no" data-plan-field="day5Badge">Day 5<br>都蘭→台中</div>
           <div class="card">
             <div class="card-body">
               <div>
                 <h3>回程日：萬巒午餐，再到玉井吃芒果冰買芒果</h3>
-                <p>早餐後從都蘭出發，沿台11回台東市，接台9南迴公路往屏東，先到萬巒豬腳街吃午餐；午餐後轉往台南玉井，安排芒果冰並到玉井青果批發市場或青果集貨場買芒果，再銜接國道北上回台中。</p>
+                <p data-plan-field="day5Text">早餐後從都蘭出發，沿台11回台東市，接台9南迴公路往屏東，先到萬巒豬腳街吃午餐；午餐後轉往台南玉井，安排芒果冰並到玉井青果批發市場或青果集貨場買芒果，再銜接國道北上回台中。</p>
                 <div class="pill-row">
-                  <span class="pill">都蘭→萬巒：約3.5-4.5小時含休息</span>
+                  <span class="pill" data-plan-field="day5Drive">都蘭→萬巒：約3.5-4.5小時含休息</span>
                   <span class="pill">萬巒→玉井：約1.5-2小時</span>
                   <span class="pill">玉井→台中：約1.5-2小時</span>
                   <span class="pill">芒果季：多集中夏季到初秋</span>
@@ -992,6 +1053,30 @@
               <li>推薦：'Etolan Style、米麻岸、達麓岸部落屋。</li>
               <li>適合時段：下午到傍晚。</li>
               <li>提醒：部落體驗請尊重拍照與祭儀規範。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">布農族</span>
+            <h3>布農部落休閒農場</h3>
+            <p>位於延平鄉，適合放在Day 3上午。可安排部落劇場、布農族歌謠、園區散步、餐飲或DIY體驗，場次與體驗需先確認。</p>
+            <ul class="fact-list">
+              <li>住宿建議：前一晚住鹿野/關山最順。</li>
+              <li>安排時段：上午，接下午都蘭文化。</li>
+              <li>提醒：劇場演出可能有人數與場次條件。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">卑南/史前</span>
+            <h3>卑南遺址公園與史前館</h3>
+            <p>Day 4下午補上台東平原與卑南文化脈絡。卑南遺址公園看現地保存，史前館本館則適合看完整考古展示。</p>
+            <ul class="fact-list">
+              <li>住宿建議：住台東市最順，住都蘭也可往返。</li>
+              <li>安排時段：玩水後的下午或海況備案。</li>
+              <li>提醒：以官方開館日與售票資訊為準。</li>
             </ul>
           </div>
         </article>
@@ -1127,6 +1212,32 @@
         </article>
         <article class="card stay-card">
           <div class="card-body">
+            <span class="tag">後兩晚市區派</span>
+            <h3>台東桂田喜來登酒店｜台東市</h3>
+            <p>如果採用「2晚鹿野 + 2晚台東市」，這類市中心飯店最方便串接台東觀光夜市、市區晚餐、伴手禮與回程補給。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>市區位置便利，餐廳、夜市、租車與補給都近；Day 5 從台東市出發回程更省一段海岸線車程。</li>
+              <li><strong>缺點：</strong>到都蘭文化體驗約25-40分鐘，到東河/金樽玩水約45-60分鐘；海岸度假感不如住都蘭。</li>
+              <li><strong>適合：</strong>重視飯店品質、夜市、市區美食、長輩或親子同行的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E6%A1%82%E7%94%B0%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">後兩晚市區派</span>
+            <h3>旅人驛站鐵花文創館｜台東市</h3>
+            <p>靠近鐵花村與台東市中心生活圈，適合想把晚上留給市區散步、夜市與小吃的人，預算也通常比大型飯店彈性。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>市區步行與覓食便利，適合把台東觀光夜市、鐵花村、正氣路小吃排在晚上。</li>
+              <li><strong>缺點：</strong>空間與度假設施不如大型飯店；停車與房型要訂房時確認。</li>
+              <li><strong>適合：</strong>朋友、情侶、預算型但想住市區中心的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E6%97%85%E4%BA%BA%E9%A9%9B%E7%AB%99%20%E9%90%B5%E8%8A%B1%E6%96%87%E5%89%B5%E9%A4%A8" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
             <span class="tag">後兩晚首選</span>
             <h3>都蘭大姆灣旅棧｜都蘭</h3>
             <p>官方網站主打依山傍海與安靜住宿空間，位置適合都蘭部落、糖廠、東河包子與金樽衝浪線。</p>
@@ -1170,6 +1281,7 @@
           <h3>我的建議訂法</h3>
           <div class="pill-row">
             <span class="pill">舒適優先：鹿鳴溫泉酒店 2晚 + 都蘭大姆灣 2晚</span>
+            <span class="pill">市區便利：鹿鳴/鹿台 2晚 + 台東桂田喜來登/旅人驛站 2晚</span>
             <span class="pill">景觀優先：鹿台民宿 2晚 + 都蘭珍珠嶺 2晚</span>
             <span class="pill">稻田優先：日暉池上 2晚 + 都蘭小星/大姆灣 2晚</span>
           </div>
@@ -1202,6 +1314,9 @@
               <li><a href="https://tour.taitung.gov.tw/zh-tw/attraction/details/430" target="_blank" rel="noreferrer">台東觀光旅遊網：伯朗大道</a></li>
               <li><a href="https://tour.taitung.gov.tw/zh-tw/experience/surfing" target="_blank" rel="noreferrer">台東觀光旅遊網：衝浪活動</a></li>
               <li><a href="https://travel.yam.com/place/17141" target="_blank" rel="noreferrer">輕旅行：台東觀光夜市</a></li>
+              <li><a href="https://www.bunun.org.tw/contact.php" target="_blank" rel="noreferrer">布農部落休閒農場官方聯絡資訊</a></li>
+              <li><a href="https://www.ttypg.gov.tw/travel/sight.php?Id=58&Type=2" target="_blank" rel="noreferrer">延平鄉觀光旅遊網：布農部落休閒農場</a></li>
+              <li><a href="https://www.nmp.gov.tw/cl.aspx?n=8830" target="_blank" rel="noreferrer">國立臺灣史前文化博物館：卑南遺址公園</a></li>
               <li><a href="https://www.atolan-style.com/" target="_blank" rel="noreferrer">'Etolan Style 都蘭國</a></li>
               <li><a href="https://www.atolan-style.com/diy" target="_blank" rel="noreferrer">'Etolan Style 職人體驗</a></li>
               <li><a href="https://mimaan.boostime.me/" target="_blank" rel="noreferrer">米麻岸 Mima'an</a></li>
@@ -1237,5 +1352,49 @@
       <span>建議路線：鹿野/關山 2 晚 + 都蘭/東河 2 晚</span>
     </div>
   </footer>
+  <script>
+    const lodgingPlans = {
+      coast: {
+        summaryTitle: "目前方案：海岸慢旅",
+        summary: "Day 3 做完布農部落與都蘭文化後住都蘭/東河；Day 4 早上玩水、下午安排卑南遺址/史前文化，再回都蘭或東河。優點是海上活動與部落體驗近，缺點是晚餐與夜市要多開一段。",
+        day3Badge: "Day 3<br>縱谷→都蘭",
+        day3Text: "上午從鹿野/關山退房後先到延平鄉布農部落休閒農場，安排部落劇場、布農族歌謠、園區散步或手作體驗。下午移動到都蘭，安排阿美族部落導覽與椰葉編織；若剛好是週四到週六，晚餐可進台東市走台東觀光夜市，再回都蘭/東河入住。",
+        day3Stay: "住宿：都蘭/東河",
+        day4Badge: "Day 4<br>住都蘭",
+        day4Text: "早上安排SUP或衝浪課。初學、想拍照與穩定體驗者選SUP；想玩浪與運動感的人選金樽、東河一帶衝浪。下午移動到卑南遺址公園或國立臺灣史前文化博物館，補上台東平原、卑南文化與史前聚落脈絡，晚上回都蘭/東河。",
+        day4Stay: "住宿：都蘭/東河",
+        day5Badge: "Day 5<br>都蘭→台中",
+        day5Text: "早餐後從都蘭出發，沿台11回台東市，接台9南迴公路往屏東，先到萬巒豬腳街吃午餐；午餐後轉往台南玉井，安排芒果冰並到玉井青果批發市場或青果集貨場買芒果，再銜接國道北上回台中。",
+        day5Drive: "都蘭→萬巒：約3.5-4.5小時含休息"
+      },
+      city: {
+        summaryTitle: "目前方案：市區便利",
+        summary: "Day 3 做完布農部落與都蘭文化後回台東市，晚上接台東觀光夜市或市區小吃；Day 4 從台東市出發玩SUP/衝浪，下午排卑南遺址公園或史前館，晚上回台東市。優點是飯店、餐廳、夜市與Day 5回程補給最方便，缺點是海岸活動後要多開車。",
+        day3Badge: "Day 3<br>縱谷→台東市",
+        day3Text: "上午從鹿野/關山退房後先到延平鄉布農部落休閒農場，安排部落劇場、布農族歌謠、園區散步或手作體驗。下午移動到都蘭，安排阿美族部落導覽與椰葉編織；傍晚回台東市，晚餐排台東觀光夜市或市區小吃。",
+        day3Stay: "住宿：台東市",
+        day4Badge: "Day 4<br>住台東市",
+        day4Text: "早上從台東市出發到東河/金樽安排SUP或衝浪課。下午回台東市方向，安排卑南遺址公園或國立臺灣史前文化博物館，補上台東平原、卑南文化與史前聚落脈絡；晚上住台東市，吃飯與補給最方便。",
+        day4Stay: "住宿：台東市",
+        day5Badge: "Day 5<br>台東市→台中",
+        day5Text: "早餐後從台東市出發，接台9南迴公路往屏東，先到萬巒豬腳街吃午餐；午餐後轉往台南玉井，安排芒果冰並到玉井青果批發市場或青果集貨場買芒果，再銜接國道北上回台中。",
+        day5Drive: "台東市→萬巒：約3-4小時含休息"
+      }
+    };
+
+    const planSelect = document.getElementById("lodgingPlan");
+    const applyPlan = (planName) => {
+      const plan = lodgingPlans[planName] || lodgingPlans.coast;
+      document.querySelectorAll("[data-plan-field]").forEach((node) => {
+        const value = plan[node.dataset.planField];
+        if (value) node.innerHTML = value;
+      });
+    };
+
+    if (planSelect) {
+      planSelect.addEventListener("change", (event) => applyPlan(event.target.value));
+      applyPlan(planSelect.value);
+    }
+  </script>
 </body>
 </html>
