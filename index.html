@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>台東四日四晚慢旅｜縱谷、都蘭、海岸與部落文化</title>
+  <style>
+    :root {
+      --ink: #17211d;
+      --muted: #5f6b64;
+      --paper: #fbfaf5;
+      --panel: #ffffff;
+      --line: #dde2d6;
+      --forest: #245447;
+      --leaf: #6f8e55;
+      --clay: #b2603f;
+      --sea: #2c6f86;
+      --sun: #d9a441;
+      --shadow: 0 18px 45px rgba(26, 39, 34, .14);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(13, 29, 25, .18), rgba(13, 29, 25, .78)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Mr.%20Brown%20Avenue%20through%20golden%20rice%20fields%20towards%20mountains.jpg?width=1800") center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 96px;
+      background: linear-gradient(180deg, rgba(251,250,245,0), var(--paper));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 116px 0 118px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, .55);
+      background: rgba(0, 0, 0, .18);
+      border-radius: 999px;
+      font-size: .88rem;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      max-width: 850px;
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, .9);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 250, 245, .93);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .nav-inner a {
+      text-decoration: none;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      background: #fff;
+      color: var(--forest);
+      font-size: .92rem;
+    }
+
+    main section {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 62px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.24rem;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(40, 48, 43, .07);
+      overflow: hidden;
+    }
+
+    .card-body { padding: 20px; }
+
+    .photo {
+      min-height: 220px;
+      background: #dce4dc center/cover;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #edf3e7;
+      color: var(--forest);
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .fact-list {
+      display: grid;
+      gap: 9px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .split-band {
+      width: 100%;
+      background: #e9efe8;
+      border-block: 1px solid var(--line);
+      margin: 36px 0 0;
+    }
+
+    .split-inner {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      padding: 52px 0;
+      align-items: center;
+    }
+
+    .route-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-size: .94rem;
+    }
+
+    .route-table th,
+    .route-table td {
+      padding: 13px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .route-table th {
+      background: var(--forest);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .route-table tr:last-child td { border-bottom: 0; }
+
+    .best {
+      color: var(--clay);
+      font-weight: 800;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+      counter-reset: day;
+    }
+
+    .day {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .day-no {
+      background: var(--forest);
+      color: #fff;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      min-height: 112px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .day .card-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(220px, .9fr);
+      gap: 18px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #f4efe5;
+      color: #694331;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      margin-top: 14px;
+      padding: 7px 12px;
+      border-radius: var(--radius);
+      background: var(--sea);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      min-height: 420px;
+    }
+
+    .feature-photo {
+      border-radius: var(--radius);
+      background: #dce4dc center/cover;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .feature-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature-stack .feature-photo { min-height: 200px; }
+
+    .food-card strong,
+    .stay-card strong { color: var(--forest); }
+
+    .source-list {
+      display: grid;
+      gap: 8px;
+      padding-left: 1.2rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .culture-map {
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    .culture-map svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .map-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .drive-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0 26px;
+    }
+
+    .drive-step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .drive-step strong {
+      display: block;
+      color: var(--forest);
+      margin-bottom: 6px;
+    }
+
+    .route-sketch {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      margin: 0 0 26px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .route-sketch svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255, 255, 255, .82);
+      padding: 32px 0;
+    }
+
+    footer .footer-inner {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 880px) {
+      .section-head,
+      .split-inner,
+      .grid.two,
+      .grid.three,
+      .grid.four,
+      .drive-strip,
+      .day .card-body,
+      .image-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .day {
+        grid-template-columns: 1fr;
+      }
+
+      .day-no {
+        min-height: 58px;
+      }
+
+      .route-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .route-sketch {
+        padding: 12px;
+      }
+
+      .route-sketch svg {
+        min-width: 780px;
+      }
+
+      .hero-inner {
+        padding: 96px 0 104px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      main section { padding: 46px 0; }
+      .card-body { padding: 16px; }
+      .photo { min-height: 190px; }
+      .hero { min-height: 86vh; }
+      .hero-inner { width: min(100% - 24px, 1120px); }
+      h1 { font-size: 2.45rem; }
+      .nav-inner {
+        width: min(100% - 20px, 1120px);
+        gap: 6px;
+      }
+      .nav-inner a {
+        padding: 7px 10px;
+        font-size: .86rem;
+      }
+      .route-table th,
+      .route-table td {
+        padding: 10px 9px;
+        font-size: .86rem;
+      }
+      .route-sketch svg {
+        min-width: 720px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">台東 4 日 4 晚｜縱谷兩晚 + 都蘭海岸兩晚</div>
+      <h1>慢下來，才是台東的正確速度</h1>
+      <p>這份行程把滑翔傘、鹿野高台、伯朗大道、原住民文化、椰葉編織、SUP 或衝浪，拆成縱谷與海岸兩個住宿基地，減少折返車程，也保留天候備案。</p>
+    </div>
+  </header>
+
+  <nav aria-label="頁面導覽">
+    <div class="nav-inner">
+      <a href="#intro">認識台東</a>
+      <a href="#culture">原住民族分布</a>
+      <a href="#stay">住宿策略</a>
+      <a href="#itinerary">四日行程</a>
+      <a href="#spots">景點活動</a>
+      <a href="#food">餐廳點心</a>
+      <a href="#lodging">住宿建議</a>
+      <a href="#sources">資料來源</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <div class="section-head">
+        <h2>山脈、稻田與太平洋交界的台東</h2>
+        <p class="lead">台東最迷人的地方不是單一景點，而是地形本身：西側中央山脈、東側海岸山脈，中間展開花東縱谷，另一側則是一路向北的東海岸。也因為範圍狹長，住宿基地比塞滿景點更重要。</p>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <div class="photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/%E9%B9%BF%E9%87%8E%E9%AB%98%E5%8F%B0%20Luye%20Gaotai%20-%20panoramio.jpg?width=1000');"></div>
+          <div class="card-body">
+            <span class="tag">花東縱谷</span>
+            <h3>鹿野、關山、池上</h3>
+            <p>適合安排滑翔傘、鹿野高台、龍田單車、關山小鎮與池上伯朗大道。節奏偏田園、單車、晨昏風景。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Dulan%20Taiwan%20Sugar-Factory-01.jpg?width=1000');"></div>
+          <div class="card-body">
+            <span class="tag">東海岸</span>
+            <h3>都蘭、東河、金樽</h3>
+            <p>文化手作、阿美族部落、海景咖啡、SUP、衝浪都集中在這一帶。住都蘭比住台東市更靠近海上活動。</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Jinzun%20Fish%20Harbor.jpg?width=1000');"></div>
+          <div class="card-body">
+            <span class="tag">城市補給</span>
+            <h3>台東市</h3>
+            <p>餐廳、夜市、租車、車站、機場方便，適合作為抵達或離開的補給點，但不建議四晚都住市區再每天長距離折返。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="split-band" id="culture">
+      <div class="split-inner">
+        <div>
+          <h2>原住民族分布：台東不是一種文化</h2>
+          <p class="lead">台東縣是台灣原住民族文化密度最高的地區之一。依台東觀光與在地原住民文化資料，縣內主要族群包含阿美族、卑南族、布農族、排灣族、魯凱族、達悟族與噶瑪蘭族等；此行會接觸到的都蘭、東河與金樽，核心是東海岸阿美族生活圈。</p>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>旅行時可以這樣理解</h3>
+            <ul class="fact-list">
+              <li><strong>阿美族：</strong>多分布於縱谷、海岸山脈兩側與東海岸；長濱、成功、東河、池上、台東市周邊皆可見聚落，人口與文化能見度最高。</li>
+              <li><strong>卑南族：</strong>以台東平原、卑南鄉、台東市周邊為重要生活區；卑南遺址、南王與知本一帶常被一起理解。</li>
+              <li><strong>布農族：</strong>主要在中央山脈側的海端、延平等山區鄉鎮，八部合音與山林文化是重要特色。</li>
+              <li><strong>排灣族、魯凱族：</strong>多在南迴與山區聚落；排灣族與太麻里、金峰、達仁一帶連結較深，魯凱族在卑南鄉東興村等地有聚落。</li>
+              <li><strong>達悟族：</strong>主要在蘭嶼，飛魚文化、拼板舟與海洋生活非常鮮明；本趟不跨蘭嶼，因此只作背景認識。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="width:min(1120px, calc(100% - 28px)); margin:0 auto; padding:0 0 52px;">
+        <div class="culture-map" aria-label="台東原住民族分布示意圖">
+          <svg viewBox="0 0 980 520" role="img" aria-labelledby="mapTitle mapDesc">
+            <title id="mapTitle">台東主要原住民族分布示意圖</title>
+            <desc id="mapDesc">示意台東縣北部海岸、縱谷、台東平原、中央山脈、南迴與蘭嶼的主要族群分布。</desc>
+            <rect x="0" y="0" width="980" height="520" fill="#f7f5ec"></rect>
+            <path d="M235 40 C170 110 138 190 150 280 C160 355 202 433 285 486 L380 474 C345 410 326 336 335 262 C345 178 385 101 446 44 Z" fill="#d7dfc9" stroke="#9eaa8e" stroke-width="2"></path>
+            <path d="M455 34 C410 110 382 190 376 270 C369 360 392 432 436 488 L540 452 C510 368 505 282 530 200 C548 139 585 83 630 41 Z" fill="#cfded8" stroke="#8da39d" stroke-width="2"></path>
+            <path d="M640 48 C578 120 543 198 542 286 C541 365 568 424 612 468 C704 424 766 354 797 262 C823 184 805 104 740 42 Z" fill="#bfd9df" stroke="#83a5ad" stroke-width="2"></path>
+            <path d="M238 46 C203 126 197 222 220 322 C238 398 270 448 305 483" fill="none" stroke="#ffffff" stroke-width="14" opacity=".7"></path>
+            <path d="M506 55 C462 143 446 238 458 332 C468 406 498 450 538 474" fill="none" stroke="#ffffff" stroke-width="14" opacity=".7"></path>
+            <path d="M820 370 C856 386 874 425 860 462 C846 500 802 513 767 492 C733 471 725 424 747 392 C763 370 793 359 820 370 Z" fill="#b9d3db" stroke="#83a5ad" stroke-width="2"></path>
+            <text x="120" y="80" font-size="18" fill="#17211d" font-weight="700">中央山脈側</text>
+            <text x="377" y="70" font-size="18" fill="#17211d" font-weight="700">花東縱谷 / 台東平原</text>
+            <text x="658" y="82" font-size="18" fill="#17211d" font-weight="700">東海岸</text>
+            <text x="774" y="450" font-size="18" fill="#17211d" font-weight="700">蘭嶼</text>
+            <g font-size="15" fill="#fff" font-weight="700">
+              <rect x="97" y="130" width="190" height="42" rx="8" fill="#6f8e55"></rect>
+              <text x="116" y="157">布農族：海端、延平</text>
+              <rect x="133" y="342" width="210" height="42" rx="8" fill="#b2603f"></rect>
+              <text x="153" y="369">排灣族：金峰、達仁</text>
+              <rect x="188" y="394" width="184" height="42" rx="8" fill="#8f6f4e"></rect>
+              <text x="207" y="421">魯凱族：東興等地</text>
+              <rect x="402" y="122" width="226" height="42" rx="8" fill="#2c6f86"></rect>
+              <text x="421" y="149">阿美族：縱谷與海岸</text>
+              <rect x="385" y="300" width="220" height="42" rx="8" fill="#d9a441"></rect>
+              <text x="405" y="327">卑南族：台東平原</text>
+              <rect x="646" y="150" width="226" height="42" rx="8" fill="#2c6f86"></rect>
+              <text x="665" y="177">阿美族：長濱、成功、東河</text>
+              <rect x="676" y="214" width="180" height="42" rx="8" fill="#5a8e9e"></rect>
+              <text x="694" y="241">噶瑪蘭族：長濱</text>
+              <rect x="760" y="392" width="158" height="42" rx="8" fill="#245447"></rect>
+              <text x="783" y="419">達悟族：蘭嶼</text>
+            </g>
+            <g font-size="13" fill="#5f6b64">
+              <text x="520" y="214">鹿野</text>
+              <text x="548" y="256">關山</text>
+              <text x="574" y="286">池上</text>
+              <text x="633" y="297">都蘭 / 東河</text>
+              <text x="518" y="365">台東市 / 卑南</text>
+              <text x="346" y="444">南迴</text>
+            </g>
+          </svg>
+          <p class="map-note">註：此圖為旅遊規劃用的分布示意，不是傳統領域或行政邊界圖。族群分布參考台東觀光文化介紹、中華郵政臺東郵局原住民文化介紹、原住民族地區16族分布圖與花東縱谷族群資料。</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="stay">
+      <div class="section-head">
+        <h2>住宿點怎麼選</h2>
+        <p class="lead">從高雄 H2O HOTEL 水京棧國際酒店出發時，第一天已經站在南台灣，進台東比從中部出發輕鬆許多。最佳解仍是先進縱谷住鹿野/關山兩晚，再移到都蘭/東河兩晚，第五天白天從東海岸回台中。</p>
+      </div>
+      <div class="drive-strip">
+        <div class="drive-step">
+          <strong>去程：H2O HOTEL → 鹿野/關山</strong>
+          從高雄鼓山出發，接國道與台9南迴進台東，再北上鹿野或關山；含休息約3.5-4.5小時，第一天可排輕量縱谷景點。
+        </div>
+        <div class="drive-step">
+          <strong>中段：縱谷 → 都蘭/東河</strong>
+          第三天上午移動，約1.5-2小時可切到東海岸；下午接部落文化與椰葉編織最順。
+        </div>
+        <div class="drive-step">
+          <strong>返程：都蘭 → 萬巒/東港 → 玉井 → 台中</strong>
+          第五天早上出發，沿台11回台東市、台9南迴出屏東，先到萬巒豬腳街午餐，再繞台南玉井吃芒果冰與買芒果，最後接國道北上；若想吃海鮮，可把萬巒改成東港華僑市場。
+        </div>
+      </div>
+      <table class="route-table">
+        <thead>
+          <tr>
+            <th>方案</th>
+            <th>住宿安排</th>
+            <th>高雄出發/台中回程合理性</th>
+            <th>到鹿野高台/滑翔傘</th>
+            <th>到伯朗大道</th>
+            <th>到都蘭文化體驗</th>
+            <th>到SUP/衝浪</th>
+            <th>判斷</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="best">A 推薦</td>
+            <td>2晚鹿野/關山 + 2晚都蘭</td>
+            <td>最合理。高雄進台東先住縱谷，第五天再從海岸線回台中。</td>
+            <td>約5-25分鐘</td>
+            <td>約35-55分鐘</td>
+            <td>住附近</td>
+            <td>約10-30分鐘</td>
+            <td>最平均，活動天候也有補飛、補課彈性。</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>4晚台東市</td>
+            <td>可行但效率低。每天南北折返，最不像慢旅。</td>
+            <td>約45-60分鐘</td>
+            <td>約75-90分鐘</td>
+            <td>約25-35分鐘</td>
+            <td>約40-60分鐘</td>
+            <td>餐飲方便，但每天都在開車。</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>2晚池上 + 2晚都蘭</td>
+            <td>可行。適合把伯朗大道放第一優先，但滑翔傘當天較早起。</td>
+            <td>約45-55分鐘</td>
+            <td>約5-15分鐘</td>
+            <td>住附近</td>
+            <td>約10-30分鐘</td>
+            <td>稻田控可選，但滑翔傘當天要早起。</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>4晚都蘭</td>
+            <td>不建議。即使從高雄出發，四晚都蘭仍會讓縱谷活動變成長途往返。</td>
+            <td>約50-70分鐘</td>
+            <td>約90分鐘上下</td>
+            <td>住附近</td>
+            <td>約10-30分鐘</td>
+            <td>海邊最舒服，縱谷行程會拉很遠。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="itinerary">
+      <div class="section-head">
+        <h2>高雄出發、台中收尾的四晚行程</h2>
+        <p class="lead">這版把跨縣市交通納入：第1天從高雄 H2O HOTEL 水京棧出發進台東縱谷，第2天玩鹿野與池上，第3天切到東海岸並安排台東觀光夜市，第4天玩海上活動，第5天經萬巒午餐、台南玉井吃芒果冰與買芒果後返台中。滑翔傘、SUP、衝浪都建議排早上並預留天候備案。</p>
+      </div>
+      <div class="route-sketch" aria-label="南台灣路線地圖與每日順序">
+        <svg viewBox="0 0 1160 700" role="img" aria-labelledby="routeTitle routeDesc">
+          <title id="routeTitle">南台灣 Day 1 到 Day 5 路線地圖</title>
+          <desc id="routeDesc">先畫南台灣底圖，再以編號與箭頭標示高雄出發、台東縱谷、東海岸、台東夜市、萬巒或東港、玉井與台中回程。</desc>
+          <rect width="1160" height="700" fill="#f7f5ec"></rect>
+          <path d="M244 88 C190 118 154 172 138 240 C120 316 122 402 152 486 C179 562 252 618 348 636 C456 656 574 636 666 592 C748 553 812 494 854 414 C898 330 914 234 880 154 C852 86 782 56 706 86 C642 112 604 170 580 246 C551 340 544 444 498 494 C450 547 338 538 282 486 C222 430 210 342 226 260 C239 193 274 132 244 88 Z" fill="#bfd9df" opacity=".78"></path>
+          <path d="M612 104 C674 96 750 116 808 170 C874 232 904 318 888 406 C872 498 808 572 720 620" fill="none" stroke="#8fbac3" stroke-width="30" opacity=".45" stroke-linecap="round"></path>
+          <path d="M194 120 C156 210 148 332 184 438 C222 552 322 622 454 642" fill="none" stroke="#c9d6b9" stroke-width="34" opacity=".55" stroke-linecap="round"></path>
+
+          <defs>
+            <marker id="pinkArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+              <path d="M2,2 L10,6 L2,10 Z" fill="#d9368a"></path>
+            </marker>
+            <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+              <path d="M2,2 L10,6 L2,10 Z" fill="#2c6f86"></path>
+            </marker>
+            <marker id="orangeArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+              <path d="M2,2 L10,6 L2,10 Z" fill="#b2603f"></path>
+            </marker>
+          </defs>
+
+          <text x="82" y="108" font-size="22" fill="#5f6b64" font-weight="800">西部 / 國道</text>
+          <text x="540" y="116" font-size="22" fill="#5f6b64" font-weight="800">台東縱谷</text>
+          <text x="878" y="170" font-size="22" fill="#5f6b64" font-weight="800">東海岸</text>
+          <text x="302" y="402" font-size="18" fill="#5f6b64">南迴公路</text>
+
+          <path d="M246 500 C360 466 470 410 586 326" fill="none" stroke="#d9368a" stroke-width="3" marker-end="url(#pinkArrow)"></path>
+          <text x="356" y="444" font-size="14" fill="#d9368a">Day 1 約3.5-4.5小時</text>
+          <path d="M586 326 C612 260 656 224 704 198" fill="none" stroke="#d9368a" stroke-width="3" marker-end="url(#pinkArrow)"></path>
+          <text x="612" y="260" font-size="14" fill="#d9368a">Day 2 往池上</text>
+          <path d="M704 198 C656 226 612 272 586 326" fill="none" stroke="#d9368a" stroke-width="2" stroke-dasharray="5 8" marker-end="url(#pinkArrow)"></path>
+          <path d="M586 326 C648 306 732 272 812 228" fill="none" stroke="#2c6f86" stroke-width="3" marker-end="url(#blueArrow)"></path>
+          <text x="660" y="292" font-size="14" fill="#2c6f86">Day 3 約1.5-2小時</text>
+          <path d="M812 228 C824 314 818 382 786 456" fill="none" stroke="#2c6f86" stroke-width="3" marker-end="url(#blueArrow)"></path>
+          <text x="836" y="350" font-size="14" fill="#2c6f86">Day 4 海岸線</text>
+          <path d="M812 228 C784 300 742 374 704 430" fill="none" stroke="#2c6f86" stroke-width="2" stroke-dasharray="4 8" marker-end="url(#blueArrow)"></path>
+          <text x="720" y="382" font-size="14" fill="#2c6f86">Day 3 晚上夜市</text>
+          <path d="M786 456 C676 526 540 548 410 510" fill="none" stroke="#b2603f" stroke-width="4" stroke-dasharray="14 10" marker-end="url(#orangeArrow)"></path>
+          <text x="554" y="536" font-size="14" fill="#b2603f">Day 5 南迴出屏東</text>
+          <path d="M410 510 C370 520 334 528 302 548" fill="none" stroke="#b2603f" stroke-width="2" stroke-dasharray="6 8" marker-end="url(#orangeArrow)"></path>
+          <text x="280" y="582" font-size="13" fill="#b2603f">替代：東港海鮮</text>
+          <path d="M410 510 C352 452 314 396 292 320" fill="none" stroke="#b2603f" stroke-width="4" stroke-dasharray="14 10" marker-end="url(#orangeArrow)"></path>
+          <text x="308" y="400" font-size="14" fill="#b2603f">萬巒午餐後去玉井</text>
+          <path d="M292 320 C264 238 250 172 236 104" fill="none" stroke="#b2603f" stroke-width="4" stroke-dasharray="14 10" marker-end="url(#orangeArrow)"></path>
+          <text x="270" y="198" font-size="14" fill="#b2603f">玉井 → 台中</text>
+
+          <g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+            <g>
+              <rect x="204" y="468" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="213" y="490" font-size="18" fill="#fff" font-weight="800">01</text>
+              <circle cx="246" cy="500" r="8" fill="#f06b3c"></circle>
+              <text x="124" y="536" font-size="21" fill="#17211d" font-weight="800">高雄 H2O HOTEL</text>
+              <text x="124" y="562" font-size="14" fill="#5f6b64">Day 1 出發</text>
+            </g>
+            <g>
+              <rect x="548" y="288" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="557" y="310" font-size="18" fill="#fff" font-weight="800">02</text>
+              <circle cx="586" cy="326" r="8" fill="#f06b3c"></circle>
+              <text x="498" y="360" font-size="21" fill="#17211d" font-weight="800">鹿野高台</text>
+              <text x="496" y="386" font-size="14" fill="#5f6b64">滑翔傘 / 住2晚</text>
+            </g>
+            <g>
+              <rect x="706" y="156" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="715" y="178" font-size="18" fill="#fff" font-weight="800">03</text>
+              <circle cx="704" cy="198" r="8" fill="#f06b3c"></circle>
+              <text x="724" y="212" font-size="21" fill="#17211d" font-weight="800">池上 / 伯朗大道</text>
+              <text x="724" y="238" font-size="14" fill="#5f6b64">Day 2 下午，回鹿野</text>
+            </g>
+            <g>
+              <rect x="802" y="184" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="811" y="206" font-size="18" fill="#fff" font-weight="800">04</text>
+              <circle cx="812" cy="228" r="8" fill="#f06b3c"></circle>
+              <text x="838" y="238" font-size="21" fill="#17211d" font-weight="800">都蘭</text>
+              <text x="838" y="264" font-size="14" fill="#5f6b64">Day 3 部落文化 / 椰葉編織</text>
+            </g>
+            <g>
+              <rect x="782" y="424" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="791" y="446" font-size="18" fill="#fff" font-weight="800">05</text>
+              <circle cx="786" cy="456" r="8" fill="#f06b3c"></circle>
+              <text x="806" y="486" font-size="21" fill="#17211d" font-weight="800">東河 / 金樽</text>
+              <text x="806" y="512" font-size="14" fill="#5f6b64">Day 4 SUP 或衝浪</text>
+            </g>
+            <g>
+              <rect x="686" y="394" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="695" y="416" font-size="18" fill="#fff" font-weight="800">06</text>
+              <circle cx="704" cy="430" r="8" fill="#f06b3c"></circle>
+              <text x="594" y="458" font-size="21" fill="#17211d" font-weight="800">台東觀光夜市</text>
+              <text x="594" y="484" font-size="14" fill="#5f6b64">Day 3 晚餐，週四至週六最佳</text>
+            </g>
+            <g>
+              <rect x="408" y="468" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="417" y="490" font-size="18" fill="#fff" font-weight="800">07</text>
+              <circle cx="410" cy="510" r="8" fill="#f06b3c"></circle>
+              <text x="430" y="520" font-size="21" fill="#17211d" font-weight="800">萬巒豬腳</text>
+              <text x="430" y="546" font-size="14" fill="#5f6b64">Day 5 午餐</text>
+            </g>
+            <g>
+              <rect x="268" y="520" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="277" y="542" font-size="18" fill="#fff" font-weight="800">07</text>
+              <circle cx="302" cy="548" r="7" fill="#f0b24a"></circle>
+              <text x="168" y="596" font-size="18" fill="#17211d" font-weight="800">或東港海鮮</text>
+            </g>
+            <g>
+              <rect x="258" y="282" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="267" y="304" font-size="18" fill="#fff" font-weight="800">08</text>
+              <circle cx="292" cy="320" r="8" fill="#f06b3c"></circle>
+              <text x="192" y="350" font-size="21" fill="#17211d" font-weight="800">台南玉井</text>
+              <text x="192" y="376" font-size="14" fill="#5f6b64">芒果冰 / 青果市場</text>
+            </g>
+            <g>
+              <rect x="202" y="64" width="34" height="30" fill="#9b9b9b"></rect>
+              <text x="211" y="86" font-size="18" fill="#fff" font-weight="800">09</text>
+              <circle cx="236" cy="104" r="8" fill="#f06b3c"></circle>
+              <text x="254" y="110" font-size="21" fill="#17211d" font-weight="800">台中</text>
+              <text x="254" y="136" font-size="14" fill="#5f6b64">Day 5 回程終點</text>
+            </g>
+          </g>
+        </svg>
+        <p class="map-note">簡圖先以南台灣輪廓作底，再用編號點與箭頭呈現每日順序。粉紅線為 Day 1-3 主要去程，藍線為台東東海岸移動與夜市支線，橘色虛線為 Day 5 回程；萬巒豬腳是主線午餐，東港海鮮是同日替代選項。</p>
+      </div>
+      <div class="timeline">
+        <article class="day">
+          <div class="day-no">Day 1<br>高雄→鹿野</div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h3>長途移動日，只安排縱谷輕行程</h3>
+                <p>建議從高雄 H2O HOTEL 水京棧國際酒店退房後出發，走國道往屏東、接台9南迴進台東，再往鹿野或關山入住。途中可在枋山、大武或太麻里休息，抵達後只排鹿野高台夕陽、龍田綠色隧道或住宿放鬆。</p>
+                <div class="pill-row">
+                  <span class="pill">住宿：鹿野/關山</span>
+                  <span class="pill">高雄到鹿野：含休息約3.5-4.5小時</span>
+                  <span class="pill">晚餐：鹿野或關山</span>
+                </div>
+              </div>
+              <div>
+                <h3>重點</h3>
+                <ul class="fact-list">
+                  <li>第一天不要排滑翔傘或海上活動，避免塞車或疲勞影響。</li>
+                  <li>聯絡滑翔傘業者確認隔天風況與集合時間。</li>
+                  <li>若遇熱氣球季，鹿野住宿與晚餐都要提早訂。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-no">Day 2<br>住鹿野</div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h3>滑翔傘、鹿野高台、伯朗大道</h3>
+                <p>早上在鹿野高台體驗飛行傘，下午往池上伯朗大道，建議租自行車進入田間道路，再到大坡池或關山補點心。</p>
+                <div class="pill-row">
+                  <span class="pill">上午：滑翔傘</span>
+                  <span class="pill">下午：池上單車</span>
+                  <span class="pill">點心：福原豆腐店/關山臭豆腐</span>
+                </div>
+              </div>
+              <div>
+                <h3>吃什麼</h3>
+                <ul class="fact-list">
+                  <li>午餐：池上飯包、池上米食小店。</li>
+                  <li>下午：福原豆腐店、關山臭豆腐。</li>
+                  <li>晚餐：關山或鹿野，隔天要換住宿，晚上不要拉太晚。</li>
+                </ul>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E9%87%8E%E9%AB%98%E5%8F%B0%20%E4%BC%AF%E6%9C%97%E5%A4%A7%E9%81%93" target="_blank" rel="noreferrer">開啟地圖查詢</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-no">Day 3<br>縱谷→都蘭</div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h3>從縱谷切到東海岸，做一場部落慢旅</h3>
+                <p>上午退房後開往都蘭或東河，途中可停鹿野茶區、初鹿牧場或台東市補給。下午安排都蘭部落導覽、阿美族文化體驗、椰葉或自然素材編織；若剛好是週四到週六，晚餐建議回台東市走台東觀光夜市，再回都蘭入住。</p>
+                <div class="pill-row">
+                  <span class="pill">住宿：都蘭/東河</span>
+                  <span class="pill">縱谷到都蘭：約1.5-2小時</span>
+                  <span class="pill">文化：都蘭部落</span>
+                  <span class="pill">手作：椰葉編織</span>
+                  <span class="pill">晚餐：台東觀光夜市</span>
+                </div>
+              </div>
+              <div>
+                <h3>建議預約</h3>
+                <ul class="fact-list">
+                  <li>'Etolan Style：都蘭部落導覽、文化手作。</li>
+                  <li>米麻岸：自然素材、阿美族文化手作。</li>
+                  <li>達麓岸部落屋：風味餐與生活文化體驗。</li>
+                  <li>台東觀光夜市多以週四至週六晚間營業資訊最常見，出發前請再確認當週公告。</li>
+                </ul>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20%E9%83%A8%E8%90%BD%E9%AB%94%E9%A9%97%20%E5%8F%B0%E6%9D%B1%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82" target="_blank" rel="noreferrer">開啟地圖查詢</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-no">Day 4<br>住都蘭</div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h3>SUP 或衝浪，午後留給海岸線</h3>
+                <p>早上安排SUP或衝浪課。初學、想拍照與穩定體驗者選SUP；想玩浪與運動感的人選金樽、東河一帶衝浪。下午可排水往上流、加路蘭、小野柳，或回台東市吃晚餐。</p>
+                <div class="pill-row">
+                  <span class="pill">上午：SUP/衝浪</span>
+                  <span class="pill">下午：加路蘭/小野柳</span>
+                  <span class="pill">晚餐：都蘭或台東市</span>
+                </div>
+              </div>
+              <div>
+                <h3>天候備案</h3>
+                <ul class="fact-list">
+                  <li>海況不佳時改都蘭糖廠、月光小棧、咖啡店。</li>
+                  <li>晚上想吃多一點，開回台東市最方便。</li>
+                  <li>隔天要長途回台中，今晚建議整理行李、早點休息。</li>
+                </ul>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20SUP%20%E9%87%91%E6%A8%BD%20%E8%A1%9D%E6%B5%AA" target="_blank" rel="noreferrer">開啟地圖查詢</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-no">Day 5<br>都蘭→台中</div>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h3>回程日：萬巒午餐，再到玉井吃芒果冰買芒果</h3>
+                <p>早餐後從都蘭出發，沿台11回台東市，接台9南迴公路往屏東，先到萬巒豬腳街吃午餐；午餐後轉往台南玉井，安排芒果冰並到玉井青果批發市場或青果集貨場買芒果，再銜接國道北上回台中。</p>
+                <div class="pill-row">
+                  <span class="pill">都蘭→萬巒：約3.5-4.5小時含休息</span>
+                  <span class="pill">萬巒→玉井：約1.5-2小時</span>
+                  <span class="pill">玉井→台中：約1.5-2小時</span>
+                  <span class="pill">芒果季：多集中夏季到初秋</span>
+                </div>
+              </div>
+              <div>
+                <h3>午餐二選一</h3>
+                <ul class="fact-list">
+                  <li>主線：萬巒豬腳街，選海鴻、林家、熊家、萬泰等老店，適合想吃屏東代表小吃與外帶豬腳的人。</li>
+                  <li>替代：東港華僑市場或東港海鮮餐廳，適合想吃生魚片、櫻花蝦、鮪魚、海鮮熱炒的人；但到玉井會稍微繞一點。</li>
+                  <li>芒果冰：有間冰舖、阿月芒果冰、玉井讚冰店可作候選，依當天排隊與停車狀況選。</li>
+                  <li>買芒果：玉井青果批發市場/青果集貨場周邊可買愛文、金煌、凱特等當季水果，建議帶保冷袋或紙箱。</li>
+                  <li>時間控管：萬巒或東港午餐不要拖太久，玉井停留約1.5小時即可，避免太晚回台中。</li>
+                  <li>天候提醒：若遇颱風、豪雨或南迴路況不佳，行前務必確認公路與天氣資訊。</li>
+                </ul>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20%E8%90%AC%E5%B7%92%E8%B1%AC%E8%85%B3%E8%A1%97%20%E7%8E%89%E4%BA%95%E9%9D%92%E6%9E%9C%E6%89%B9%E7%99%BC%E5%B8%82%E5%A0%B4%20%E5%8F%B0%E4%B8%AD" target="_blank" rel="noreferrer">開啟主線路線</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="spots">
+      <div class="section-head">
+        <h2>景點與活動介紹</h2>
+        <p class="lead">以下是這趟行程的核心景點與活動。建議把「必須預約」的項目先固定，再把自然景點放進空檔。</p>
+      </div>
+      <div class="image-strip">
+        <div class="feature-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Sunshine%20over%20straight%20road%20on%20Mr.%20Brown%20Avenue.jpg?width=1400');"></div>
+        <div class="feature-stack">
+          <div class="feature-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Dulan%20Taiwan%20Sugar-Factory-01.jpg?width=900');"></div>
+          <div class="feature-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Jinzun%20Fish%20Harbor.jpg?width=900');"></div>
+        </div>
+      </div>
+      <div class="grid three" style="margin-top:18px;">
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">必玩</span>
+            <h3>鹿野高台滑翔傘</h3>
+            <p>台東飛行傘代表地點，視野可看花東縱谷、茶園與台地。務必預約，並接受因風向、雨勢延後或取消。</p>
+            <ul class="fact-list">
+              <li>住宿建議：鹿野或關山。</li>
+              <li>安排時段：早上優先。</li>
+              <li>備案：鹿野高台散步、龍田單車。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">必去</span>
+            <h3>伯朗大道</h3>
+            <p>池上田野代表景觀，最適合單車慢遊。稻浪季與收割後氛圍差異很大，晴天、雲影、夕陽各有表情。</p>
+            <ul class="fact-list">
+              <li>住宿建議：鹿野/關山可當日往返。</li>
+              <li>交通：入口停車後步行或租自行車。</li>
+              <li>順遊：大坡池、池上飯包、福原豆腐店。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">文化</span>
+            <h3>都蘭部落與椰葉編織</h3>
+            <p>都蘭是東海岸阿美族文化的重要入口。導覽與手作適合留半天，不要排成趕場式打卡。</p>
+            <ul class="fact-list">
+              <li>推薦：'Etolan Style、米麻岸、達麓岸部落屋。</li>
+              <li>適合時段：下午到傍晚。</li>
+              <li>提醒：部落體驗請尊重拍照與祭儀規範。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">海上活動</span>
+            <h3>SUP 或衝浪</h3>
+            <p>SUP較親近、拍照與初學友善；衝浪較運動、受浪況影響更大。金樽、東河、都蘭一帶都有課程業者。</p>
+            <ul class="fact-list">
+              <li>住宿建議：都蘭或東河。</li>
+              <li>安排時段：早上為佳。</li>
+              <li>準備：防曬、換洗衣物、可下水鞋。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">海岸線</span>
+            <h3>加路蘭、小野柳、水往上流</h3>
+            <p>不需要太多體力，適合排在海上活動後。若同行者想放鬆，這些點比再跨區追景點更舒服。</p>
+            <ul class="fact-list">
+              <li>住宿建議：都蘭或台東市。</li>
+              <li>安排時段：午後與傍晚。</li>
+              <li>順遊：都蘭糖廠、月光小棧。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag">補給</span>
+            <h3>台東市晚餐與點心</h3>
+            <p>最後一晚若想吃得集中，台東市最強。從都蘭開回市區約半小時，可把晚餐與伴手禮一起處理。</p>
+            <ul class="fact-list">
+              <li>適合：榕樹下米苔目、寶桑豆花、津芳冰城。</li>
+              <li>炸物：阿鋐炸雞、藍蜻蜓。</li>
+              <li>夜市：依營業日確認。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="food">
+      <div class="section-head">
+        <h2>午晚餐與點心推薦</h2>
+        <p class="lead">這裡用區域來分，不用每天硬排同一家。台東很多小店會臨時公休，出發前一天請再用地圖確認營業時間。</p>
+      </div>
+      <div class="grid three">
+        <article class="card food-card">
+          <div class="card-body">
+            <span class="tag">鹿野/關山/池上</span>
+            <h3>縱谷吃法</h3>
+            <ul class="fact-list">
+              <li><strong>午餐：</strong>池上飯包、池上米食餐廳。</li>
+              <li><strong>點心：</strong>福原豆腐店、關山臭豆腐、關山便當。</li>
+              <li><strong>晚餐：</strong>鹿野或關山市區小吃，建議簡單，不要太晚回山線住宿。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E6%B1%A0%E4%B8%8A%E9%A3%AF%E5%8C%85%20%E7%A6%8F%E5%8E%9F%E8%B1%86%E8%85%90%E5%BA%97%20%E9%97%9C%E5%B1%B1%E8%87%AD%E8%B1%86%E8%85%90" target="_blank" rel="noreferrer">查縱谷美食</a>
+          </div>
+        </article>
+        <article class="card food-card">
+          <div class="card-body">
+            <span class="tag">都蘭/東河</span>
+            <h3>海岸吃法</h3>
+            <ul class="fact-list">
+              <li><strong>午餐：</strong>東河包子、都蘭咖啡簡餐、海岸小店。</li>
+              <li><strong>晚餐：</strong>都蘭小房子周邊、東河海鮮、預約式原住民風味餐。</li>
+              <li><strong>點心：</strong>東河包子、都蘭糖廠冰品或咖啡。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%20%E6%9D%B1%E6%B2%B3%20%E7%BE%8E%E9%A3%9F%20%E5%8E%9F%E4%BD%8F%E6%B0%91%20%E9%A2%A8%E5%91%B3%E9%A4%90" target="_blank" rel="noreferrer">查海岸美食</a>
+          </div>
+        </article>
+        <article class="card food-card">
+          <div class="card-body">
+            <span class="tag">台東市</span>
+            <h3>市區補完</h3>
+            <ul class="fact-list">
+              <li><strong>正餐：</strong>榕樹下米苔目、老東台米苔目、七里香水煎包。</li>
+              <li><strong>炸物：</strong>阿鋐炸雞、藍蜻蜓。</li>
+              <li><strong>甜點：</strong>寶桑豆花、津芳冰城、陳記麻糬。</li>
+              <li><strong>夜市：</strong>Day 3 晚餐排台東觀光夜市，常見資訊為週四至週六晚間營業，出發前請再確認。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E5%B8%82%20%E6%A6%95%E6%A8%B9%E4%B8%8B%E7%B1%B3%E8%8B%94%E7%9B%AE%20%E5%AF%B6%E6%A1%91%E8%B1%86%E8%8A%B1%20%E6%B4%A5%E8%8A%B3%E5%86%B0%E5%9F%8E" target="_blank" rel="noreferrer">查市區美食</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="lodging">
+      <div class="section-head">
+        <h2>實際住宿推薦</h2>
+        <p class="lead">以下名單以「活動距離、高雄出發後的順路程度、停車與回台中前一晚的休息品質」為主要考量。價格與房況變動很快，訂房前請再確認合法旅宿登記、停車、早餐與取消規則。</p>
+      </div>
+      <div class="grid three">
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">前兩晚首選</span>
+            <h3>鹿鳴溫泉酒店｜鹿野</h3>
+            <p>適合從高雄開進台東後想直接放鬆的人。台東旅宿介紹稱它是靠近鹿野高台的溫泉酒店，地址在鹿野鄉中華路一段200號。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>距鹿野高台與滑翔傘集合區近，飯店設施完整，長途抵達後有溫泉與停車便利。</li>
+              <li><strong>缺點：</strong>價格通常高於一般民宿；熱氣球季與假日房價、房況壓力大。</li>
+              <li><strong>適合：</strong>家庭、長輩、想把第一晚開車疲勞降到最低的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E9%B3%B4%E6%BA%AB%E6%B3%89%E9%85%92%E5%BA%97" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">前兩晚景觀派</span>
+            <h3>鹿台民宿｜鹿野高台</h3>
+            <p>位於鹿野高台一帶，主打高台景觀、草地與餐飲休憩，適合想把夕陽、清晨與滑翔傘都放在同一生活圈的人。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>鹿野高台氛圍最直接，早上活動集合壓力低，景觀感比市區旅館強。</li>
+              <li><strong>缺點：</strong>房間數與餐飲選項有限，對設備期待不要用大型飯店標準看。</li>
+              <li><strong>適合：</strong>情侶、攝影、想看夕陽與縱谷夜色的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%8F%B0%E6%B0%91%E5%AE%BF%20%E9%B9%BF%E9%87%8E%E9%AB%98%E5%8F%B0" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">縱谷替代</span>
+            <h3>日暉國際渡假村｜池上</h3>
+            <p>如果你更重視伯朗大道與池上稻田，可把前兩晚改住池上。日暉在池上新興村，度假村型態完整，適合親子或多人。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>伯朗大道、大坡池與池上單車最順，設施完整，行程感較度假。</li>
+              <li><strong>缺點：</strong>到鹿野高台滑翔傘約45-55分鐘，Day 2 早上要更早出門。</li>
+              <li><strong>適合：</strong>稻田控、親子、想把池上排成主角的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E6%9A%89%E5%9C%8B%E9%9A%9B%E6%B8%A1%E5%81%87%E6%9D%91%20%E6%B1%A0%E4%B8%8A" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">後兩晚首選</span>
+            <h3>都蘭大姆灣旅棧｜都蘭</h3>
+            <p>官方網站主打依山傍海與安靜住宿空間，位置適合都蘭部落、糖廠、東河包子與金樽衝浪線。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>後兩晚活動半徑短，文化體驗與海上活動都方便；比住台東市更有海岸感。</li>
+              <li><strong>缺點：</strong>夜間餐飲選擇少於台東市，晚餐要先決定留都蘭或進市區。</li>
+              <li><strong>適合：</strong>想安靜看山海、但又不想離都蘭太遠的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%E5%A4%A7%E5%A7%86%E7%81%A3%E6%97%85%E6%A3%A7" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">後兩晚自在派</span>
+            <h3>都蘭小星民宿｜都蘭</h3>
+            <p>主打像東海岸旅人的家，位置適合步調輕鬆、想把都蘭咖啡店、手作與海邊活動串在一起的旅人。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>氛圍輕鬆，適合年輕旅人或不追求大型飯店設備的人。</li>
+              <li><strong>缺點：</strong>若同行有長輩、行李多或很重視飯店設施，可能不如度假型住宿。</li>
+              <li><strong>適合：</strong>朋友、情侶、想住在都蘭生活圈的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%E5%B0%8F%E6%98%9F%E6%B0%91%E5%AE%BF" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+        <article class="card stay-card">
+          <div class="card-body">
+            <span class="tag">後兩晚景觀派</span>
+            <h3>都蘭珍珠嶺民宿｜都蘭</h3>
+            <p>官方介紹提到可選面山或面海客房，也有戶外浴池等休憩感，適合把第四晚當作海岸放鬆收尾。</p>
+            <ul class="fact-list">
+              <li><strong>優點：</strong>山海景觀感強，適合慢下來；和都蘭、東河活動仍在合理車程內。</li>
+              <li><strong>缺點：</strong>如果只想步行吃喝，便利度不如住在都蘭聚落中心。</li>
+              <li><strong>適合：</strong>想安靜、看景、第四晚好好睡的人。</li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%83%BD%E8%98%AD%E7%8F%8D%E7%8F%A0%E5%B6%BA%E6%B0%91%E5%AE%BF" target="_blank" rel="noreferrer">查住宿位置</a>
+          </div>
+        </article>
+      </div>
+      <div class="card" style="margin-top:18px;">
+        <div class="card-body">
+          <h3>我的建議訂法</h3>
+          <div class="pill-row">
+            <span class="pill">舒適優先：鹿鳴溫泉酒店 2晚 + 都蘭大姆灣 2晚</span>
+            <span class="pill">景觀優先：鹿台民宿 2晚 + 都蘭珍珠嶺 2晚</span>
+            <span class="pill">稻田優先：日暉池上 2晚 + 都蘭小星/大姆灣 2晚</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head">
+        <h2>出發前確認清單</h2>
+        <p class="lead">距離與營業狀態請以出發前一天的 Google Maps 與店家公告為準。台東活動常受天氣影響，行程保留彈性會玩得更好。</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="card-body">
+            <h3>要先預約</h3>
+            <ul class="fact-list">
+              <li>鹿野高台滑翔傘：確認體重限制、保險、取消規則。</li>
+              <li>SUP或衝浪：確認集合地點、是否含裝備與教練。</li>
+              <li>部落導覽與椰葉編織：確認是否成團、可否拍照、是否含餐。</li>
+              <li>週末與暑假住宿：鹿野熱氣球季、都蘭海邊房型都要早訂。</li>
+              <li>高雄出發、台中回程：出發前確認南迴公路天氣、施工與落石管制；回程日不要再排跨區景點。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <h3>參考資料</h3>
+            <ul class="source-list">
+              <li><a href="https://tour.taitung.gov.tw/zh-tw/attraction/details/430" target="_blank" rel="noreferrer">台東觀光旅遊網：伯朗大道</a></li>
+              <li><a href="https://tour.taitung.gov.tw/zh-tw/experience/surfing" target="_blank" rel="noreferrer">台東觀光旅遊網：衝浪活動</a></li>
+              <li><a href="https://travel.yam.com/place/17141" target="_blank" rel="noreferrer">輕旅行：台東觀光夜市</a></li>
+              <li><a href="https://www.atolan-style.com/" target="_blank" rel="noreferrer">'Etolan Style 都蘭國</a></li>
+              <li><a href="https://www.atolan-style.com/diy" target="_blank" rel="noreferrer">'Etolan Style 職人體驗</a></li>
+              <li><a href="https://mimaan.boostime.me/" target="_blank" rel="noreferrer">米麻岸 Mima'an</a></li>
+              <li><a href="https://www.wagaligongtaiwan.com/sup/" target="_blank" rel="noreferrer">WaGaLiGong SUP / 衝浪</a></li>
+              <li><a href="https://www.surfingtaitung.com/jinzun-surf-house-tw" target="_blank" rel="noreferrer">金樽衝浪小屋</a></li>
+              <li><a href="https://www.post.gov.tw/post/internet/Q_localpost/index.jsp?ID=1392589936545" target="_blank" rel="noreferrer">中華郵政臺東郵局：原住民文化介紹</a></li>
+              <li><a href="https://tour.taitung.gov.tw/ja/discover/culture" target="_blank" rel="noreferrer">台東觀光旅遊網：文化與原住民族介紹</a></li>
+              <li><a href="https://www.h2ohotel.com.tw/zh-tw/about" target="_blank" rel="noreferrer">H2O Hotel 水京棧國際酒店官方網站</a></li>
+              <li><a href="https://guide.easytravel.com.tw/scenic/3774" target="_blank" rel="noreferrer">四方通行：萬巒豬腳街</a></li>
+              <li><a href="https://www.walkerland.com.tw/amp/article/view/158639" target="_blank" rel="noreferrer">WalkerLand：海鴻萬巒豬腳</a></li>
+              <li><a href="https://www.mjib.gov.tw/FileUploads/eBooks/c7c0637e4b794858b6d78043f6a4e80f/Section_file/f9365245d2374e598902555b583dc85e.pdf" target="_blank" rel="noreferrer">法務部調查局刊物：東港海鮮美食介紹</a></li>
+              <li><a href="https://journey.tw/yujing-mango-market/" target="_blank" rel="noreferrer">旅行圖中：玉井青果市場</a></li>
+              <li><a href="https://travel.yam.com/place/25710" target="_blank" rel="noreferrer">輕旅行：玉井公有零售市場位置資訊</a></li>
+              <li><a href="https://sstainan.com/tainan-food-drink/tainan-mango-ice/" target="_blank" rel="noreferrer">妳好南搞：玉井芒果冰整理</a></li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E5%9C%B0%E5%8D%8016%E6%97%8F%E5%88%86%E5%B8%83%E5%9C%96.jpg" target="_blank" rel="noreferrer">Wikimedia Commons：原住民族地區16族分布圖</a></li>
+              <li><a href="https://discover.taitung.gov.tw/ja/accommodation-ja/%E9%B9%BF%E9%87%8E-%E9%B9%BF%E9%B3%B4%E6%BA%AB%E6%B3%89%E9%85%92%E5%BA%97-%EF%BC%88luminous-hot-spring-resort-spa%EF%BC%89/" target="_blank" rel="noreferrer">台東旅宿介紹：鹿鳴溫泉酒店</a></li>
+              <li><a href="https://lutai.com.tw/" target="_blank" rel="noreferrer">鹿台民宿官方網站</a></li>
+              <li><a href="https://www.papago-resort.com/taitung/papago/aboutpapago.html" target="_blank" rel="noreferrer">日暉國際渡假村台東池上</a></li>
+              <li><a href="https://www.tamowan.com/" target="_blank" rel="noreferrer">都蘭大姆灣旅棧</a></li>
+              <li><a href="https://www.dulanstar-guesthouse.com/" target="_blank" rel="noreferrer">都蘭小星民宿</a></li>
+              <li><a href="https://zhenzhu.ttbnb.tw/" target="_blank" rel="noreferrer">都蘭珍珠嶺民宿</a></li>
+              <li><a href="https://commons.wikimedia.org/wiki/Category:Mr._Brown_Avenue" target="_blank" rel="noreferrer">Wikimedia Commons：伯朗大道影像</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>台東四日四晚慢旅規劃</span>
+      <span>建議路線：鹿野/關山 2 晚 + 都蘭/東河 2 晚</span>
+    </div>
+  </footer>
+</body>
+</html>
